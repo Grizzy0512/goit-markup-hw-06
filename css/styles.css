@@ -448,7 +448,7 @@ h1 {
     letter-spacing: 0.04em;
     color: #fff;
     border-radius: 4px;
-    padding: 16px, 32px;
+    padding: 16px 32px;
     width: 169px;
     height: 56px;
     text-align: center;
@@ -1149,7 +1149,7 @@ h2 {
         flex-direction: column;
         width: 453px;
         height: 80px;
-        position: absolute;
+        position: static;
         right: 0;
         margin-top: 0;
     }
