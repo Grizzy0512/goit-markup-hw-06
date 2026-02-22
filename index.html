@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Everething about WebStudio" />
     <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,42 +22,44 @@
     <header class="header">
         <div class="container">
             <!-- #region top line -->
-            <nav class="nav">
+            <nav class="nav-main">
                 <a class="logo" href="./index.html">
                     <span class="logo-accent">WEB</span><span class="logo-second">STUDIO</span>
                 </a>
                 <ul class="nav-list">
-                    <li class="nav-item">
-                        <a class="nav-link current" href="#studio">
+                    <li><a class="nav-link current" href="#studio">
                             Studio
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">
+                    <li><a class="nav-link" href="#portfolio">
                             Portfolio
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacts">
+                    <li><a class="nav-link" href="#contacts">
                             Contacts
                         </a>
                     </li>
                 </ul>
             </nav>
-            <address id="contacts" class="contact-info">
-                <ul class="contact-list">
+            <address id="contacts" class="address-block">
+                <ul class="address-list">
                     <li><a class="address-nav" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
                     <li><a class="address-nav" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
                 </ul>
             </address>
             <!-- #endregion top line -->
+            <button type="button" class="burger-menu" data-menu-open>
+                <svg class="burger-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
         </div>
     </header>
     <!-- #endregion header -->
     <!-- #region main -->
     <main>
         <!-- #region image -->
-        <section id="studio" class="hero">
+        <section id="studio" class="main-hero">
             <div class="container">
                 <h1 class="hero-title">Effective Solutions for Your Business</h1>
                 <button class="hero-button" type="button" data-modal-open>Order Service</button>
@@ -64,7 +67,7 @@
         </section>
         <!-- #endregion image -->
         <!-- #region features -->
-        <section class="section features">
+        <section class="features">
             <div class="container">
                 <h2 class="visually-hidden">Our Features</h2>
                 <ul class="features-list">
@@ -75,7 +78,7 @@
                             </svg>
                         </div>
                         <h3 class="features-title">Strategy</h3>
-                        <p class="features-text">Our goal is to identify the business problem to walk away with the
+                        <p class="text-features">Our goal is to identify the business problem to walk away with the
                             perfect and creative solution.</p>
                     </li>
                     <li class="features-item">
@@ -85,7 +88,7 @@
                             </svg>
                         </div>
                         <h3 class="features-title">Punctuality</h3>
-                        <p class="features-text">Bring the key message to the brand's audience for the best price within
+                        <p class="text-features">Bring the key message to the brand's audience for the best price within
                             the shortest possible time.</p>
                     </li>
                     <li class="features-item">
@@ -95,7 +98,7 @@
                             </svg>
                         </div>
                         <h3 class="features-title">Diligence</h3>
-                        <p class="features-text">Research and confirm brands with the strongest digital growth
+                        <p class="text-features">Research and confirm brands with the strongest digital growth
                             opportunities and minimize risk.</p>
                     </li>
                     <li class="features-item">
@@ -105,7 +108,7 @@
                             </svg>
                         </div>
                         <h3 class="features-title">Technologies</h3>
-                        <p class="features-text">Design practice focused on digital experiences. We bring forth a deep
+                        <p class="text-features">Design practice focused on digital experiences. We bring forth a deep
                             passion for problem-solving.</p>
                     </li>
                 </ul>
@@ -113,18 +116,20 @@
         </section>
         <!-- #endregion features -->
         <!-- #region team -->
-        <section class="section team">
+        <section class="team">
             <div class="container">
-                <h2 class="section-title">Our Team</h2>
+                <h2 class="team-title">Our Team</h2>
                 <ul class="team-list">
-                    <li class="team-item">
+                    <li class="team-part">
                         <article class="team-card">
                             <div class="card-wrapper">
-                                <img class="team-card-image" src="./images/img-3.jpg" alt="Mark Guerrero" width="264"
-                                    height="260">
-                                <div class="team-card-info">
-                                    <h3 class="team-card-name">Mark Guerrero</h3>
-                                    <p class="team-card-role">Product Designer</p>
+                                <img class="team-card-image" src="./images/img-3.jpg" 
+                                srcset ="./images/img-3.jpg 1x, ./images/MarkGuerrero@2x.jpg 2x" width="264"
+                                    height="260"
+                                    alt="Mark Guerrero">
+                                <div class="border-team">
+                                    <h3 class="team-worker">Mark Guerrero</h3>
+                                    <p class="team-text">Product Designer</p>
                                     <ul class="social-links">
                                         <li>
                                             <a href="https://www.instagram.com/" class="social-icon" target="_blank">
@@ -159,13 +164,14 @@
                             </div>
                         </article>
                     </li>
-                    <li class="team-item">
+                    <li class="team-part">
                         <article class="team-card">
-                            <img class="team-card-image" src="./images/img-2.jpg" alt="Tom Ford" width="264"
+                            <img class="team-card-image" src="./images/img-2.jpg" 
+                            srcset="./images/img-2.jpg 1x, ./images/TomFord@2x.jpg 2x" alt="Tom Ford" width="264"
                                 height="260">
-                            <div class="team-card-info">
-                                <h3 class="team-card-name">Tom Ford</h3>
-                                <p class="team-card-role">Frontend Developer</p>
+                            <div class="border-team">
+                                <h3 class="team-worker">Tom Ford</h3>
+                                <p class="team-text">Frontend Developer</p>
                                 <ul class="social-links">
                                     <li>
                                         <a href="https://www.instagram.com/" class="social-icon" target="_blank">
@@ -199,13 +205,14 @@
                             </div>
                         </article>
                     </li>
-                    <li class="team-item">
+                    <li class="team-part">
                         <article class="team-card">
-                            <img class="team-card-image" src="./images/img-1.jpg" alt="Camila Garcia" width="264"
+                            <img class="team-card-image" src="./images/img-1.jpg" 
+                            srcset="./images/img-1.jpg 1x, ./images/CamilaGarcia@2x.jpg 2x" alt="Camila Garcia" width="264"
                                 height="260">
-                            <div class="team-card-info">
-                                <h3 class="team-card-name">Camila Garcia</h3>
-                                <p class="team-card-role">Marketing</p>
+                            <div class="border-team">
+                                <h3 class="team-worker">Camila Garcia</h3>
+                                <p class="team-text">Marketing</p>
                                 <ul class="social-links">
                                     <li>
                                         <a href="https://www.instagram.com/" class="social-icon" target="_blank">
@@ -239,13 +246,14 @@
                             </div>
                         </article>
                     </li>
-                    <li class="team-item">
+                    <li class="team-part">
                         <article class="team-card">
-                            <img class="team-card-image" src="./images/img.jpg" alt="Daniel Wilson" width="264"
+                            <img class="team-card-image" src="./images/img.jpg" 
+                            srcset="./images/img.jpg 1x, ./images/DanielWilson@2x.jpg 2x" alt="Daniel Wilson" width="264"
                                 height="260">
-                            <div class="team-card-info">
-                                <h3 class="team-card-name">Daniel Wilson</h3>
-                                <p class="team-card-role">UI Designer</p>
+                            <div class="border-team">
+                                <h3 class="team-worker">Daniel Wilson</h3>
+                                <p class="team-text">UI Designer</p>
                                 <ul class="social-links">
                                     <li>
                                         <a href="https://www.instagram.com/" class="social-icon" target="_blank">
@@ -284,12 +292,12 @@
         </section>
         <!-- #endregion team -->
         <!-- #region portfolio -->
-        <section class="section portfolio">
+        <section class="portfolio">
             <div class="container">
 
-                <h2 id="our-portfolio" class="section-title">Our Portfolio</h2>
+                <h2 id="our-portfolio" class="portfolio-main-title">Our Portfolio</h2>
                 <ul class="grid-list">
-                    <li class="portfolio-item">
+                    <li class="portfolio-part">
                         <article>
                             <div class="portfolio-img-overlay">
                                 <p class="portfolio-item-overlay">
@@ -297,16 +305,17 @@
                                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
                                     · Cloud Storage App
                                 </p>
-                                <img class="portfolio-card-image" src="./images/banking-app.jpg" alt="Banking App"
+                                <img class="portfolio-card-image" src="./images/banking-app.jpg"
+                                srcset="./images/banking-app.jpg 1x, ./images/BankingApp@2x.jpg 2x" alt="Banking App"
                                     width="360" height="300">
                             </div>
-                            <div class="portfolio-card-content">
-                                <h3 class="portfolio-card-title">Banking App</h3>
-                                <p class="portfolio-card-category">App</p>
+                            <div class="border-portfolio">
+                                <h3 class="portfolio-title">Banking App</h3>
+                                <p class="portfolio-part-app">App</p>
                             </div>
                         </article>
                     </li>
-                    <li class="portfolio-item">
+                    <li class="portfolio-part">
                         <article>
                             <div class="portfolio-img-overlay">
                                 <p class="portfolio-item-overlay">
@@ -315,15 +324,15 @@
                                     · Cloud Storage App
                                 </p>
                                 <img class="portfolio-card-image" src="./images/cashless-payment.jpg"
-                                    alt="Cashless Payment" width="360" height="300">
+                                srcset="./images/cashless-payment.jpg 1x, ./images/CashlessPayment@2x.jpg 2x" alt="Cashless Payment" width="360" height="300">
                             </div>
-                            <div class="portfolio-card-content">
-                                <h3 class="portfolio-card-title">Cashless Payment</h3>
-                                <p class="portfolio-card-category">Marketing</p>
+                            <div class="border-portfolio">
+                                <h3 class="portfolio-title">Cashless Payment</h3>
+                                <p class="portfolio-part-app">Marketing</p>
                             </div>
                         </article>
                     </li>
-                    <li class="portfolio-item">
+                    <li class="portfolio-part">
                         <article>
                             <div class="portfolio-img-overlay">
                                 <p class="portfolio-item-overlay">
@@ -331,16 +340,17 @@
                                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
                                     · Cloud Storage App
                                 </p>
-                                <img class="portfolio-card-image" src="./images/meditation-app.jpg" alt="Meditation App"
+                                <img class="portfolio-card-image" src="./images/meditation-app.jpg"
+                                srcset="./images/meditation-app.jpg 1x, ./images/MeditationApp@2x.jpg 2x" alt="Meditation App"
                                     width="360" height="300">
                             </div>
-                            <div class="portfolio-card-content">
-                                <h3 class="portfolio-card-title">Meditation App</h3>
-                                <p class="portfolio-card-category">App</p>
+                            <div class="border-portfolio">
+                                <h3 class="portfolio-title">Meditation App</h3>
+                                <p class="portfolio-part-app">App</p>
                             </div>
                         </article>
                     </li>
-                    <li class="portfolio-item">
+                    <li class="portfolio-part">
                         <article>
                             <div class="portfolio-img-overlay">
                                 <p class="portfolio-item-overlay">
@@ -348,16 +358,17 @@
                                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
                                     · Cloud Storage App
                                 </p>
-                                <img class="portfolio-card-image" src="./images/taxi-service.jpg" alt="Taxi Service"
+                                <img class="portfolio-card-image" src="./images/taxi-service.jpg" 
+                                srcset="./images/taxi-service.jpg 1x, ./images/TaxiService@2x.jpg 2x" alt="Taxi Service"
                                     width="360" height="300">
                             </div>
-                            <div class="portfolio-card-content">
-                                <h3 class="portfolio-card-title">Taxi Service</h3>
-                                <p class="portfolio-card-category">Marketing</p>
+                            <div class="border-portfolio">
+                                <h3 class="portfolio-title">Taxi Service</h3>
+                                <p class="portfolio-part-app">Marketing</p>
                             </div>
                         </article>
                     </li>
-                    <li class="portfolio-item">
+                    <li class="portfolio-part">
                         <article>
                             <div class="portfolio-img-overlay">
                                 <p class="portfolio-item-overlay">
@@ -366,15 +377,15 @@
                                     · Cloud Storage App
                                 </p>
                                 <img class="portfolio-card-image" src="./images/screen-ill.jpg"
-                                    alt="Screen Illustrations" width="360" height="300">
+                                srcset="./images/screen-ill.jpg 1x, ./images/ScreenIllustrations@2x.jpg 2x" alt="Screen Illustrations" width="360" height="300">
                             </div>
-                            <div class="portfolio-card-content">
-                                <h3 class="portfolio-card-title">Screen Illustrations</h3>
-                                <p class="portfolio-card-category">Design</p>
+                            <div class="border-portfolio">
+                                <h3 class="portfolio-title">Screen Illustrations</h3>
+                                <p class="portfolio-part-app">Design</p>
                             </div>
                         </article>
                     </li>
-                    <li class="portfolio-item">
+                    <li class="portfolio-part">
                         <article>
                             <div class="portfolio-img-overlay">
                                 <p class="portfolio-item-overlay">
@@ -382,12 +393,13 @@
                                     Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
                                     · Cloud Storage App
                                 </p>
-                                <img class="portfolio-card-image" src="./images/online-courses.jpg" alt="Online Courses"
+                                <img class="portfolio-card-image" src="./images/online-courses.jpg" 
+                                srcset="./images/online-courses.jpg 1x, ./images/OnlineCourses@2x.jpg 2x" alt="Online Courses"
                                     width="360" height="300">
                             </div>
-                            <div class="portfolio-card-content">
-                                <h3 class="portfolio-card-title">Online Courses</h3>
-                                <p class="portfolio-card-category">Marketing</p>
+                            <div class="border-portfolio">
+                                <h3 class="portfolio-title">Online Courses</h3>
+                                <p class="portfolio-part-app">Marketing</p>
                             </div>
                         </article>
                     </li>
@@ -400,7 +412,7 @@
     <!-- #region footer -->
     <footer class="footer">
         <div class="container">
-            <div class="logo-footer-wrapper">
+            <div class="logo-item-footer">
                 <a class="footer-logo" href="./index.html">
                     <span class="logo-accent">WEB</span><span class="f-logo-second">STUDIO</span>
                 </a>
@@ -458,6 +470,65 @@
         </div>
     </footer>
     <!-- #endregion footer -->
+    <!--mobile menu-->
+    <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu-conteiner">
+            <button type="button" class="close-mobile" data-menu-close>
+                <svg class="close-btn-mobile" width="8" height="8">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+            <nav class="nav-main-mobile">
+                <ul class="nav-list-mobile">
+                    <li><a class="mobile-nav-link-studio" href="#studio">Studio</a></li>
+                    <li><a class="mobile-nav-link" href="#our-portfolio">Portfolio</a></li>
+                    <li><a class="mobile-nav-link" href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-footer">
+                <address class="address-mobile">
+                    <ul class="address-list-mobile">
+                        <li>
+                            <a class="address-nav-mobile" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                        </li>
+                        <li>
+                            <a class="address-nav-email" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                        </li>
+                    </ul>
+                </address>
+                <ul class="social-links-mobile">
+                    <li>
+                        <a href="https://www.instagram.com/" class="social-icon" target="_blank">
+                            <svg width="24" height="24" class="icon">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com" class="social-icon" target="_blank">
+                            <svg width="24" height="24" class="icon">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/" class="social-icon" target="_blank">
+                            <svg width="24" height="24" class="icon">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/" class="social-icon" target="_blank">
+                            <svg width="24" height="24" class="icon">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <!-- region popup -->
     <div class="backdrop" data-modal>
         <div class="popup-review">
@@ -518,6 +589,7 @@
     </div>
     <!-- endregion popup -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>
